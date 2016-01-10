@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My App</title>
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+      
+    </script>
+  </head>
+  <body>
+    <h1>Welcome!</h1>
+    <div class="container">
+      	<%= Date() %>
+ 		<table class="table table-bordered">      		
+ 			<tr>
+      			<th>Id</th>
+      			<th>First Name</th>
+      			<th>Last Name</th>
+      		</tr>
+      			<% for (var i = 0; i < items.length; i++) { %> 
+      		 		<tr>
+      		 			<td><%= items[i].id %> </td>
+      		 			<td> <%= items[i].firstName %></td>
+      		 			<td> <%= items[i].lastName %></td>
+      		 		</tr>
+      		 	<% } %>
+      	</table>
+      	<br />
+
+      	<form action='/add' method="post">
+      		First Name: <input type="text" name="newItemFirstName"><br /><br />
+      		Last Name:  <input type="text" name="newItemLastName"><br /><br />
+      		<input type="submit">
+      	</form>
+    </div>
+    <script src="bootstrap/dist/js/bootstrap.js"></script>
+    <script src="jquery/dist/jquery.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,20 @@
+doctype html
+html(lang='en')
+	head
+		title="Demo App"
+		script (type='text/javascript')
+			Date()
+	body
+		
+		h3 Welcome.. Its Jade!
+		h4  #{Date()}
+		table
+			tr
+				th id
+				th First Name
+				th Last Name
+			each val, index in items
+				tr
+					td	#{index+1}
+					td	#{items[index].firstName}
+					td	#{items[index].lastName}
